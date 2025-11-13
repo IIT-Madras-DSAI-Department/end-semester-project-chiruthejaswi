@@ -1,55 +1,78 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/R05VM8Rg)
 # IIT-Madras-DA2401-Machine-Learning-Lab-End-Semester-Project
+## **End Semester Project – MNIST Digit Classification**
 
-## 📌 Purpose of this Template
 
-This repository is the **starter** for your End Semester Project submission in GitHub Classroom. You can implement your solution and push your work in this repository. Please free to edit this README.md file as per your requirements.
+## 📌 Purpose of this Repository
+This repository contains the **complete implementation** of my MNIST multi-class digit classification system for the End Semester Project of **DA2401 – Machine Learning Lab, IIT Madras**.
 
-> **Scope (as per assignment brief):**
-> Give an introduction to your repository here: Eg. This repository contains a complete implementation for ...
+The project requirements restrict the use of ML libraries such as scikit-learn or XGBoost.  
+**All models are implemented from scratch using only Python, NumPy, and SciPy.**
 
+The system includes:
+- Linear classification models  
+- Generative models  
+- Clustering-based classification  
+- Bagging ensemble models  
+- A stacked meta-learner  
+- Extensive hyperparameter tuning  
+- Fully reproducible experiments  
+
+All code is modular, clean, and designed strictly according to the assignment guidelines.
 ---
-
-**Important Note:** 
-1. TAs will evaluate using the `.py` file only.
-2. All your reports, plots, visualizations, etc pertaining to your solution should be uploaded to this GitHub repository
-
----
-
 ## 📁 Repository Structure
+├── algorithms.py # All ML algorithms implemented
+├── main.py # Main experiment script (training, tuning, evaluation)
+├── Endsem.pdf # Final report (hyperparameters, bias-variance, analysis)
+├── README.md # This file
 
-* Describe your repository structure here. Explain about overall code organization.
+---
+### **Summary of Code Organization**
+- **algorithms.py**  
+  Contains implementations for:
+  - Ridge Regression (One-vs-Rest)
+  - Softmax Regression
+  - Nearest Centroid Classifier
+  - Gaussian Naive Bayes
+  - K-Means Classifier
+  - Bagging Ensemble
+  - Utility functions (F1 score, one-hot)
+
+- **main.py**  
+  - Loads MNIST CSV files  
+  - Builds feature matrices  
+  - Runs multiple hyperparameter combinations  
+  - Evaluates train/validation macro-F1  
+  - Builds bagged Softmax models  
+  - Builds the stacked meta-learner  
+  - Prints results + stores them in `experiment_results.csv`  
 
 ---
 
-## 📦 Installation & Dependencies
+# 📦 Installation & Dependencies
 
-* Mention all the related instructions for installation of related packages for running your code here.
+### **Dependencies (No ML libraries used):**
+- Python 3.8+
+- NumPy  
+- SciPy (optional but allowed)
+- Matplotlib (only for optional plots)
+
+Install using:
+
+```bash
+pip install numpy scipy matplotlib
 
 ---
 
 ## ▶️ Running the Code
 
-All experiments should be runnable from the command line **and** reproducible in the notebook.
-
 ### A. Command-line (recommended for grading)
 
-* Mention the instructions to run you .py files.
+python3 main.py
   
----
-
-## You can further add your own sections/titles along with corresponding contents here:
-
 ---
 
 ## 🧾 Authors
 
-**<Name, Roll No.>**, IIT Madras (2025–26)
-
-
-## Best Practices:
-* Keep commits with meaningful messages.
-* Please do not write all code on your local machine and push everything to GitHub on the last day. The commits in GitHub should reflect how the code has evolved during the course of the assignment.
-* Collaborations and discussions with other students is strictly prohibited.
-* Code should be modularized and well-commented.
+**<Chiru thejaswi, DA24B036>**, IIT Madras (2025–26)
 
